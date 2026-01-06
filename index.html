@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RR Technosoft | DevOps with Multi-Cloud</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ===== LUXURY BACKGROUND ===== */
+body{
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0,255,255,0.25), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(255,0,255,0.25), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,215,0,0.18), transparent 45%),
+    linear-gradient(180deg,#05070c,#060b18,#02030a);
+  overflow-x:hidden;
+}
+
+/* moving light overlay */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(120deg,
+      transparent 30%,
+      rgba(0,229,255,0.15),
+      transparent 70%);
+  animation:lightMove 10s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes lightMove{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(100%)}
+}
+
+/* ===== HEADER ===== */
+header{
+  position:relative;
+  padding:90px 20px;
+  text-align:center;
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at center,
+    rgba(255,255,255,0.08),
+    transparent 60%);
+}
+
+.brand{
+  font-family:'Playfair Display',serif;
+  font-size:68px;
+  letter-spacing:4px;
+  background:linear-gradient(90deg,#ff3c3c,#ffd700,#00e5ff);
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 40px rgba(255,215,0,0.5);
+}
+
+.subtitle{
+  font-size:30px;
+  margin:18px 0 35px;
+  color:#eaeaea;
+}
+
+.highlight{
+  color:#00e5ff;
+  text-shadow:0 0 20px rgba(0,229,255,0.8);
+}
+
+/* badges */
+.badge{
+  display:inline-block;
+  padding:12px 26px;
+  margin:10px;
+  border-radius:50px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:
+    0 0 25px rgba(0,229,255,0.4),
+    inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* ===== SECTION ===== */
+section{
+  max-width:1200px;
+  margin:80px auto;
+  padding:50px;
+  background:rgba(255,255,255,0.05);
+  border-radius:25px;
+  backdrop-filter:blur(18px);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.8),
+    inset 0 0 40px rgba(255,255,255,0.05);
+  position:relative;
+  overflow:hidden;
+}
+
+section::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:25px;
+  background:linear-gradient(120deg,#00e5ff,#ff00ff,#ffd700);
+  opacity:0.3;
+  filter:blur(20px);
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:35px;
+  color:#ffd700;
+  text-shadow:0 0 25px rgba(255,215,0,0.6);
+}
+
+/* ===== CARDS ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.card{
+  position:relative;
+  padding:30px;
+  text-align:center;
+  border-radius:18px;
+  background:rgba(0,0,0,0.55);
+  border:1px solid rgba(255,255,255,0.15);
+  font-size:18px;
+  overflow:hidden;
+  transition:0.4s ease;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,
+    transparent 30%,
+    rgba(255,255,255,0.35),
+    transparent 70%);
+  transform:translateX(-100%);
+}
+
+.card:hover::before{
+  animation:shine 0.8s forwards;
+}
+
+@keyframes shine{
+  to{transform:translateX(100%)}
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.06);
+  box-shadow:
+    0 0 35px rgba(0,229,255,0.6),
+    0 0 70px rgba(255,0,255,0.4);
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  margin:90px 0;
+}
+
+.cta button{
+  padding:20px 60px;
+  font-size:22px;
+  border:none;
+  border-radius:60px;
+  cursor:pointer;
+  color:#000;
+  background:linear-gradient(90deg,#ffd700,#00e5ff);
+  box-shadow:
+    0 0 40px rgba(255,215,0,0.9),
+    0 0 80px rgba(0,229,255,0.6);
+  transition:0.4s;
+}
+
+.cta button:hover{
+  transform:scale(1.15);
+  box-shadow:
+    0 0 60px rgba(255,215,0,1),
+    0 0 120px rgba(0,229,255,0.9);
+}
+
+/* footer */
+footer{
+  padding:30px;
+  text-align:center;
+  color:#aaa;
+  background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">RR TECHNOSOFT</div>
+  <div class="subtitle">
+    DEVOPS with <span class="highlight">Multi-Cloud (AWS & Azure)</span>
+  </div>
+
+  <span class="badge">100% Job Assistance</span>
+  <span class="badge">Live Hands-On Training</span>
+  <span class="badge">Real-Time Projects</span>
+</header>
+
+<section>
+  <h2>DevOps Tools & Technologies</h2>
+  <div class="grid">
+    <div class="card">Linux Administration</div>
+    <div class="card">Shell Scripting</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">Maven</div>
+    <div class="card">Jenkins (CI/CD)</div>
+    <div class="card">Docker</div>
+    <div class="card">Kubernetes</div>
+    <div class="card">Ansible</div>
+    <div class="card">Terraform</div>
+    <div class="card">SonarQube & JFrog</div>
+  </div>
+</section>
+
+<div class="cta">
+  <button>Enroll Now 🚀</button>
+</div>
+
+<footer>
+  © 2026 RR Technosoft | Premium DevOps & Cloud Training
+</footer>
+
+</body>
+</html>
